@@ -1,0 +1,38 @@
+{
+  "name": "jwt_user_auth",
+  "version": "1.0.0",
+  "description": "user authentication by using JWT",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianjang/nodejs_example.git"
+  },
+  "keywords": [
+    "jwt",
+    "user",
+    "authentication",
+    "node.js"
+  ],
+  "author": "email: brian dot jang11 at gmail dot com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brianjang/nodejs_example/issues"
+  },
+  "homepage": "https://github.com/brianjang/nodejs_example#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^7.4.3",
+    "mongoose": "^4.11.10",
+    "mongoose-unique-validator": "^1.0.5",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.0"
+  }
+}
