@@ -1,0 +1,27 @@
+{
+  "name": "file_upload_express",
+  "version": "1.0.0",
+  "description": "file upload test with multer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "multer",
+    "file",
+    "upload",
+    "save",
+    "to",
+    "local",
+    "disk",
+    "express.js"
+  ],
+  "author": "brian dot jang11 at gmail dot com",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "colors": "^1.1.2",
+    "express": "^4.15.4",
+    "multer": "^1.3.0"
+  }
+}
