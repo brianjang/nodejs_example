@@ -14,10 +14,6 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 
 app.use(function(req, res, next) {
-  console.log('req.headers.authorization');
-  // console.log(req.headers.authorization);
-  console.log(req.headers.incoauth);
-
   if (req.headers && req.headers.incoauth && req.headers.incoauth.split(' ')[0] === 'JWT') {
     jsonwebtoken.verify(req.headers.incoauth.split(' ')[1], privateKey, function(err, decode) {
       if (err) {
@@ -37,6 +33,10 @@ app.use(function(req, res, next) {
 
 // add router
 require('./user/user.server.routes')(app);
+
+app.use(function(req, res) {
+  res.status(404).send({ url: req.originalUrl + ' not found' })
+});
 
 var port = config.server.port;
 app.listen(process.env.PORT || port, function() {

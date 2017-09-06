@@ -8,9 +8,6 @@ var privateKey = config.key.privateKey;
 exports.signup = function(req, res) {
   async.waterfall([
     function(callback) {
-      console.log('signin req.body');
-      console.log(req.body);
-
       req.body.password = bcrypt.hashSync(req.body.password, 10);
       User.saveUser(req.body, function(err, user) {
         if (!err) {
@@ -58,8 +55,6 @@ exports.signin = function(req, res) {
       User.findUser(query, function(err, user) {
         if (err) {
           let error = {}
-          console.log('err---------------');
-          console.log(err);
           error.statusCode = 500;
           error.msg = `Oh uh, something went wrong`;
           callback(error, null);
@@ -81,9 +76,6 @@ exports.signin = function(req, res) {
       })
     }, 
     function(user_info, callback) {
-      console.log('user_info');
-      console.log(user_info);
-
       var tokenData = {
         username: user_info.username,
         id: user_info._id
