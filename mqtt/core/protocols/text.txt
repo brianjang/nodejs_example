@@ -1,0 +1,66 @@
+mqtt event packetreceive =====================
+Packet {
+  cmd: 'connack',
+  retain: false,
+  qos: 0,
+  dup: false,
+  length: 2,
+  topic: null,
+  payload: null,
+  sessionPresent: false,
+  returnCode: 0 }
+mqtt event packetsend ======================
+{ cmd: 'subscribe',
+  subscriptions: [ { topic: 'meertag', qos: 0 } ],
+  qos: 1,
+  retain: false,
+  dup: false,
+  messageId: 51983 }
+mqtt event packetsend ======================
+{ cmd: 'publish',
+  topic: 'meertag',
+  payload: '{id: 12:34:56:78, p: 010-2644-1182}',
+  qos: 0,
+  retain: false,
+  messageId: 51984 }
+mqtt event connect ===========================
+cmd
+retain
+qos
+dup
+length
+topic
+payload
+sessionPresent
+returnCode
+mqtt event packetreceive =====================
+Packet {
+  cmd: 'suback',
+  retain: false,
+  qos: 0,
+  dup: false,
+  length: 3,
+  topic: null,
+  payload: null,
+  granted: [ 0 ],
+  messageId: 51983 }
+mqtt event packetreceive =====================
+Packet {
+  cmd: 'publish',
+  retain: false,
+  qos: 0,
+  dup: false,
+  length: 44,
+  topic: 'meertag',
+  payload: <Buffer 7b 69 64 3a 20 31 32 3a 33 34 3a 35 36 3a 37 38 2c 20 70 3a 20 30 31 30 2d 32 36 34 34 2d 31 31 38 32 7d> }
+mqtt event message ===========================
+meertag
+<Buffer 7b 69 64 3a 20 31 32 3a 33 34 3a 35 36 3a 37 38 2c 20 70 3a 20 30 31 30 2d 32 36 34 34 2d 31 31 38 32 7d>
+Packet {
+  cmd: 'publish',
+  retain: false,
+  qos: 0,
+  dup: false,
+  length: 44,
+  topic: 'meertag',
+  payload: <Buffer 7b 69 64 3a 20 31 32 3a 33 34 3a 35 36 3a 37 38 2c 20 70 3a 20 30 31 30 2d 32 36 34 34 2d 31 31 38 32 7d> }

@@ -1,0 +1,25 @@
+{
+  "name": "incowiz_push",
+  "version": "1.0.0",
+  "description": "incowiz private push server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mqtt",
+    "push",
+    "mosquitto",
+    "rabbitmq"
+  ],
+  "author": "Brian Jang",
+  "license": "ISC",
+  "dependencies": {
+    "amqp": "^0.2.6",
+    "amqplib": "^0.4.2",
+    "colors": "^1.1.2",
+    "mqtt": "^1.14.0",
+    "redis": "^2.6.3",
+    "mongodb": "2.2.9"
+  }
+}
